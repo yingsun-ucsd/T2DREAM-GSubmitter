@@ -124,8 +124,8 @@ if ($doGet) {
   if ($URI == "files") {
     //input: aliase replicate fastq_file award lab
     $replicate=assert_property($input_data, "replicate");
-    if (!preg_match('/^bing-ren:(\S+)$/', $aliases[0], $matched)) {
-      error("^bing-ren:(\S+)$? $aliases[0]");
+    if (!preg_match('/^kyle-gaulton:(\S+)$/', $aliases[0], $matched)) {
+      error("^kyle-gaulton:(\S+)$? $aliases[0]");
     }
     $gz="$matched[1].fastq.gz";
     if (!file_exists("files/gz/$gz")) {
@@ -159,13 +159,13 @@ if ($doGet) {
     $input_data->{"submitted_file_name"}="files/gz/$gz";
     trace("Updated_input_data", $input_data);
     /*
-     if not exists files/gz/${aliase##bing-ren:}.fastq.gz
-       cp promoter.sdsc.edu:.../$fastq_file files/gz/${aliase##bing-ren:}.fastq.gz
+     if not exists files/gz/${aliase##kyle-gaulton:}.fastq.gz
+       cp promoter.sdsc.edu:.../$fastq_file files/gz/${aliase##kyle-gaulton:}.fastq.gz
      get dataset: experiment #encsr base on #replicate
      "dataset", "replicate", "file_format", "file_size", "md5sum", "output_type", "submitted_file_name", "award", "lab" 
      file_format/output_type: reads/fastq
-     file_size & md5sum: from files/gz/${aliase##bing-ren:}.fastq.gz
-     submitted_file_name: files/gz/${aliase##bing-ren:}.fastq.gz
+     file_size & md5sum: from files/gz/${aliase##kyle-gaulton:}.fastq.gz
+     submitted_file_name: files/gz/${aliase##kyle-gaulton:}.fastq.gz
     */ 
   }
 
