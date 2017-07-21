@@ -1,7 +1,7 @@
 {
   "Experiment" : {
     "URI" : "experiments",
-    "FIELDS": ["award", "lab", "dataset_type", "description", "assay_term_id", "assay_term_name", "biosample_term_name", "biosample_term_id", "biosample_type", "target", "possible_controls", "documents"]
+    "FIELDS": ["award", "lab", "dataset_type", "description", "assay_term_id", "assay_term_name", "biosample_term_name", "biosample_term_id", "biosample_type", "target", "possible_controls", "documents", "dbxrefs"]
   },
   "Library" : {
     "URI" : "libraries",
